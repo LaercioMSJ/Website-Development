@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*
+	Assignment 5 - Calculator 
+	Calculator 
+	Author: Laercio M Silva Jr W0433181
+	Date: 05/02/2020
+   
+	Filename: calculator_styles.css
+	Location\Filename: ..\calculator\js\calculator_styles.css
+*/
+
+
+body * {
+   display: block; 
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* HTML and Body Styles */
+html {
+   background: gray;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+   min-width: 640px;
+   background: white;
+   padding: 50px;
+}
+
+
+/* div */
+body > div {
+   display: inline-grid;
+   grid-template-columns: 80px 80px 80px 80px;
+   grid-gap: 15px;
+	width: 400px;
+   background: lightgrey;
+   padding: 15px;
+   border: gray solid 2.5px;
+   border-radius: 15px;
+}
+
+/* display */
+#display {
+   grid-column-start: 1;
+   grid-column-end: 5;
+   margin: 15px 0;
+   background: white;
+   padding: 0 10px;
+   border: gray solid 2px;
+   border-radius: 10px;
+   font-size: 30px;
+   text-align: right;
+
+}
+
+/* buttons */
+button {
+
+   background: gray;
+   border: black solid 2px;
+   border-radius: 10px;
+   font-size: 30px;
+   text-align: center;
+}

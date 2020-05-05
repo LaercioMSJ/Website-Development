@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*
+	Assignment 5 - Form 
+	NSCC Application Form 
+	Author: Laercio M Silva Jr W0433181
+	Date: 05/02/2020
+   
+	Filename: form_styles.css
+	Location\Filename: ..\form\css\form_styles.css
+*/
+
+body * {
+   display: block; 
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* HTML and Body Styles */
+html {
+   background: gray;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+   min-width: 640px;
+   background: white;
+}
+
+
+/* Header Styles */
+body > header {
+   width: 100%;
+   background-color: #004477;
+   padding: 4%;
+}
+
+header > h1 {
+   font-family: arial, helvetica, sans-serif;
+   color: white;
+   font-size: 32px;
+   text-align: center;
+   letter-spacing: -0.05em;
+   font-weight: 800;
+}
+
+/* Table Styles */
+table {
+   display: table;
+   margin: 15px;
+   border-spacing: 12px;
+   table-layout: fixed;
+}
+
+tr {
+   display: table-row;
+}
+
+td {
+   display: table-cell;
+   vertical-align: top;
+}
+
+h2 {
+   font-family: arial, helvetica, sans-serif;
+   color: #004477;
+   font-size: 22px;
+   text-align: left;
+   letter-spacing: -0.05em;
+   font-weight: 600;
+}
+
+label {
+   font-family: arial, helvetica, sans-serif;
+   color: #004477;
+   font-size: 15px;
+   text-align: left;
+   font-weight: 400;
+   margin: 4px 0;
+   display: inline-block;
+}
+
+input[type=radio], #personalInfoGenderGroup {
+   display: inline-block;
+}
+
+#maleRadio, #femaleRadio, #englishFirstLangNoRadio, #appFeeMastercardRadio,
+#appFeeDiscoverRadio, #appFeeAmericanExpressRadio, #appFeeChequeRadio {
+   margin: 0 0 0 10px;
+}
+
+input[type=text], input[type=tel], input[type=email] {
+   width: 100%;
+   padding: 3px 8px;
+   display: inline-block;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 22px;
+   border-bottom: 2px solid rgb(155,155,155);
+   background: rgb(232,232,232);
+   box-sizing: border-box;
+ }
+
+ #opacity1, #opacity2, #opacity3 {
+   opacity: 0.2;
+ }
+
+ input:focus {
+   background-color: #a6d8ff;
+}
+ 
+ input[type=submit] {
+   width: 200px;
+   background-color: #004477;
+   padding: 12px;
+   margin: 8px auto 32px auto;
+   border: none;
+   border-radius: 12px;
+   cursor: pointer;
+   font-family: arial, helvetica, sans-serif;
+   color: white;
+   font-size: 22px;
+   text-align: center;
+   letter-spacing: -0.05em;
+   font-weight: 600;
+ }
+ 
+ input[type=submit]:hover {
+   background-color: #003761;
+ }
+
+ #tdDateBirth {
+    width: 500px;
+ }
+
+ #tdFirstLang {
+   width: 240px;
+}
+
+/* nscc Img Styles */
+form {
+   position: relative;
+}
+
+img {
+   position: absolute;
+   right: 15px;
+   bottom: 15px;
+}
+
+/* Footer Styles */
+body > footer {
+   width: 100%;
+   background-color: #004477;
+   padding: 3%;
+}
+
+footer > h1 {
+   font-family: arial, helvetica, sans-serif;
+   color: white;
+   font-size: 26px;
+   text-align: center;
+   letter-spacing: -0.05em;
+   font-weight: 800;
+}

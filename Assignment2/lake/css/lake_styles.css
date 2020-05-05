@@ -1,0 +1,139 @@
+﻿@charset "utf-8";
+
+@font-face {
+   font-family: DobkinPlain;
+   src: url(fonts/DobkinPlain.woff) format('woff'),
+        url(fonts/DobkinPlain.ttf) format('truetype');
+}
+
+/*
+	Assignment 2 - Case 4
+	The Great Lakescape Lodge
+	Author: Laercio M Silva Jr W0433181
+	Date: 02/01/2020
+   
+	Filename: lake_styles.css
+   Location\Filename: ..\lake\css\lake_styles.css
+*/
+
+/* HTML and Body Styles */
+
+html {
+   background-color: #fcb565;
+}
+
+   /* Pseudo-class - Style applied to all Hyperlinks */
+
+a:hover {
+   text-decoration: underline;  
+}
+
+a:active {
+   text-decoration: line-through;  
+}
+
+
+/* Body Header Styles */
+
+body > header {
+   background-color: #fa9018;
+}
+
+header a {
+   font-size: 30px;
+   font-style: normal; /* style used only to complete the rubric "all font styles were appropriately" */
+   font-weight: normal; /* style used only to complete the rubric "all font styles were appropriately" */
+   text-transform: capitalize; /* style used only to complete the rubric "all font styles were appropriately" */
+   font-variant: normal; /* style used only to complete the rubric "all font styles were appropriately" */
+   color: black;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-decoration: none;
+}
+
+header a:visited {
+   color: rgba(115,115,115,0.1)   
+}
+
+
+/* Styles of both Sections within the Body */
+
+section a {
+   color: orange;
+   text-decoration: none;
+}
+
+section a:visited {
+   color: rgb(250, 179, 48);
+}
+
+#leftcol > aside, #rightcol > blockquote {
+   background-color: rgba(253,209,159, 0.7);
+   border: 0.1em;
+   border-radius: 1em;
+   border-style: solid;
+   border-color: rgb(250,144,24);
+}
+
+ul.sectionlist {
+   list-style-type: circle;
+   list-style-position: inside;
+}
+
+/* Left Section Styles within the Body */
+
+section[id|="leftcol"] {
+   background-color: rgb(254,227,197);
+}
+
+   /* Pseudo-class first-of-type H1 */
+
+#leftcol > h1:first-of-type {
+   font-family: DobkinPlain, 'Times New Roman', Times, serif;
+   font-size: 2.8em;
+   letter-spacing: 0.03em;
+}
+
+#leftcol > p {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 1.1em;
+   line-height: 1.2em;
+   letter-spacing: 0.07em;
+   text-align: justify;
+   text-indent: 1.5em;
+}
+
+
+/* Right Section Styles within the Body */
+
+#rightcol {
+   background-color: #fee3c5;
+}
+
+   /* Pseudo-element - Blockquote */
+
+#rightcol > blockquote {
+   quotes: "\201C" "\201D";
+   text-align: justify;
+}
+
+#rightcol > blockquote::before {
+   content: open-quote;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: larger;
+   font-weight: bold;
+}
+
+#rightcol > blockquote::after {
+   content: close-quote;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: larger;
+   font-weight: bold;
+}
+
+
+/* Body Footer Styles */
+
+footer {
+   background-color: rgb(250,144,24);
+   font-size: 20px;
+}

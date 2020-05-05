@@ -1,0 +1,321 @@
+@charset "utf-8"; 
+
+/*
+	Assignment 3 - Case 4
+	Park City Gazette Style Sheet
+	Author: Laercio M Silva Jr W0433181
+	Date: 02/16/2020
+   
+	Filename: pcg_paper.css
+	Location\Filename: ..\pcg\css\pcg_paper.css
+*/
+
+/* Reset Structural and Typographic Style Sheet */
+
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+	display: block; 
+	background: transparent;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* Structural Styles */
+
+/* HTML and Body Styles */
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+	min-width: 640px;
+
+	background-color: rgb(118,118,118);
+}
+
+
+/* Section and Articles Styles */
+
+body > section {	
+	width: 100%;
+	clear: both;
+
+	padding: 1%;
+	border: 3px solid black;
+	background-color: rgba(246,246,246,0.5);
+}
+
+section::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+body > section > article {
+	padding: 1.5%;
+	margin: 0.8%;
+}
+
+body > section > article#topleft  {
+	width: 17.2%;
+	float: left;
+
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#topmiddle  {
+	width: 44%;
+	float: left;
+
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+body > section > article#topright  {
+	width: 34%;
+	float: right;
+
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#bottomleft  {
+	width: 28.2%;
+	float: left;
+	clear: left;
+
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+body > section > article#bottommiddle  {
+	width: 33%;
+	float: right;
+
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#bottomright  {
+	width: 34%;
+	float: right;
+	clear: right;
+
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+
+/* Images Styles */
+
+body > header > img {
+	margin: 0;
+	width: 100%;
+	border-right: 3px solid black;
+}
+
+body > section > article#topmiddle img {
+	float: right;
+	width: 90px;
+	margin: 0 5px;
+}
+
+
+/* Heading Styles and Text Separator */        /*O que é melhor repetir o nome dos stylos para separalos por layout e tipografia ou bota tudo junto??? devo usar o caminho completo body > section > article#topleft h1 ou so article#topleft h1 ta bom???*/
+
+body > section > article#topleft h1 {
+	padding-bottom: 8%;
+	border-bottom: 1.5px solid black;
+	border-radius: 10px;
+	margin-bottom: 8%;
+}
+
+article#topmiddle h1::after {  /* Insertion of text separator for article#topmiddle h1 */
+	content: "\22D8 \22D9 \22D8 \22D9 \22D8 \00A0 \2748 \00A0 \22D9 \22D8 \22D9 \22D8 \22D9";
+	display: block;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 12px 0;
+}
+
+body > section > article#topright h1 {
+	padding-bottom: 8%;
+	border-bottom: 1.5px solid black;
+	margin-bottom: 8%;
+}
+
+body > section > article#bottomleft h1 {
+	padding-bottom: 8%;
+	border-bottom: 1.5px solid black;
+	margin-bottom: 8%;
+}
+
+body > section > article#bottommiddle h1 {
+	padding-bottom: 8%;
+	border-bottom: double black;
+	border-bottom-width: 6px;
+	border-radius: 6px;
+	margin-bottom: 8%;
+}
+
+body > section > article#bottomright h1 {
+	padding-bottom: 22px;
+	border-bottom: 1.5px solid black;
+	margin-bottom: 22px;
+}
+
+
+/* Navigation Styles */	
+
+
+
+
+
+/* List Styles */
+
+
+
+
+
+/* Footer Styles */
+
+body > footer {
+	width: 100%;
+	clear: both;
+	border-right: 3px solid black;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 1%;
+}
+
+body > footer span.line {   /* line.class predetermines a place where the line should break */
+	display: inline-block;
+}
+
+
+
+
+/* Typographic Styles */
+
+/* Articles Styles */
+
+/* Heading Styles */
+
+body > section > article#topleft h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#topmiddle h1 {
+	font-family: Times, 'Times New Roman', 'Times-Roman', Georgia, serif;
+	text-align: center;
+	font-size: 38px;
+	letter-spacing: -0.5px;
+	font-weight: 600;
+	line-height: 40px;
+	color: #444;
+}
+
+body > section > article#topright h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottomleft h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottommiddle h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottomright h1 {
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0.05em;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 500;
+}	
+
+
+/* Articles Styles */
+
+body > section > article#topleft li {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#topmiddle > p {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: justify;
+	text-indent: 32px;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#topright li {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: left;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottomleft > p {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: justify;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottommiddle > p {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: justify;
+	font-size: 16px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottomright > p {
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 15px;
+	letter-spacing: 0.07em;
+	margin-top: 8px;
+	color: rgb(30,30,30);
+}
+
+
+
+/* Footer Styles */
+
+body > footer {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}

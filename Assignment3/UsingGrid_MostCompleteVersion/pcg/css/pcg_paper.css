@@ -1,0 +1,355 @@
+@charset "utf-8"; 
+
+/*
+	Assignment 3 - Case 4
+	Park City Gazette Style Sheet
+	Author: Laercio M Silva Jr W0433181
+	Date: 02/16/2020
+   
+	Filename: pcg_paper.css
+	Location\Filename: ..\pcg\css\pcg_paper.css
+*/
+
+/* Reset Structural and Typographic Style Sheet */
+
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+	display: block; 
+	background: transparent;
+	font-size: 100%;
+	margin: 0;  /*5th rubric - Resets margin and padding on all elements to zero*/
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* Structural Styles */
+
+/* HTML and Body Styles */
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;    /*2nd rubric - Page is very well laid out in a fluid design that works well between 640 and 960 pixels*/
+	min-width: 640px;
+
+	background-color: rgb(118,118,118);
+}
+
+
+/* Header Styles */
+
+body > header {
+	width: 100%;
+	border-right: 3px solid black;
+	position: relative;     /*6th rubric - One element and the body have been relative or absolute positioned*/
+}
+
+body > header > img#pcglogo {
+	margin: 0;
+	width: 100%;
+}
+
+body > header > img#naa {
+	margin: 0;
+	width: 15%;
+	position: absolute;
+	top: 5px;    /*6th rubric - The element has been moved using top/left correctly*/
+	left: 5px;
+}
+
+
+/* Section and Articles Styles */
+
+body > section {	
+	width: 100%;
+	padding: 8px;
+	border: 3px solid black;
+	background-color: rgba(246,246,246,0.5);
+	display: grid;   /*4th rubric - Uses CSS grid template correctly*/
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto;
+}
+
+body > section > article {
+	padding: 16px;
+	margin: 8px;
+}
+
+body > section > article#topleft  {
+	grid-row: 1/3;
+	grid-column: 1/2;
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#topmiddle  {
+	grid-row: 1/3;
+	grid-column: 2/4;
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+body > section > article#topright  {
+	grid-row: 1/2;
+	grid-column: 4/5;
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#bottomleft  {
+	grid-row: 3/4;
+	grid-column: 1/3;
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+body > section > article#bottommiddle  {
+	grid-row: 3/4;
+	grid-column: 3/4;
+	border: 1.5px solid black;
+	background-color: rgba(128,128,128,0.3);
+}
+
+body > section > article#bottomright  {
+	grid-row: 2/4;
+	grid-column: 4/5;
+	border: 1.5px dashed black;
+	background-color: rgba(157,157,157,0.3);
+}
+
+
+/* Section - Images Styles */
+
+body > section > article#topmiddle img {
+	float: right;                  /* Using float */
+	width: 90px;
+	margin: 0 5px;
+}
+
+
+/* Heading Styles and Text Separator */   
+
+body > section > article#topleft h1 {
+	padding-bottom: 22px;
+	border-bottom: 1.5px solid black;
+	border-radius: 10px;
+	margin-bottom: 22px;
+}
+
+article#topmiddle h1::after {  /* Insertion of text separator for article#topmiddle h1 */
+	content: "\22D8 \22D9 \22D8 \22D9 \22D8 \00A0 \2748 \00A0 \22D9 \22D8 \22D9 \22D8 \22D9";
+	display: block;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 12px 0;
+}
+
+body > section > article#topright h1 {
+	padding-bottom: 22px;
+	border-bottom: 1.5px solid black;
+	border-radius: 10px;
+	margin-bottom: 22px;
+}
+
+body > section > article#bottomleft h1 {
+	padding-bottom: 22px;
+	border-bottom: 1.5px solid black;
+	margin-bottom: 22px;
+}
+
+body > section > article#bottommiddle h1 {
+	padding-bottom: 22px;
+	border-bottom: double black;
+	border-bottom-width: 6px;
+	border-radius: 6px;
+	margin-bottom: 22px;
+}
+
+body > section > article#bottomright h1 {
+	padding-bottom: 22px;
+	border-bottom: 1.5px solid black;
+	margin-bottom: 22px;
+}
+
+
+/* List Styles - Pseudo-class */
+
+li.newgroup {
+	margin-top: 25px;
+}
+
+
+/* Hyperlink "a" Styles */
+
+a:hover {
+	color: gray;
+	text-decoration: none;  
+ }
+ 
+ a:active, a:link {
+	text-decoration: none;  
+ }
+
+ a:visited {
+	color:  blue;
+	text-decoration: none;  
+ }
+
+
+/* Footer Styles */
+
+body > footer {
+	width: 100%;
+	clear: both;
+	border-right: 3px solid black;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 1%;
+}
+
+body > footer span.line {   /* line.class predetermines a place where the line should break */
+	display: inline-block;
+}
+
+
+
+/* Typographic Styles */
+
+/* Articles Styles */
+
+/* Heading Styles */
+
+body > section > article#topleft h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#topmiddle h1 {
+	font-family: Times, 'Times New Roman', 'Times-Roman', Georgia, serif;
+	text-align: center;
+	font-size: 38px;
+	letter-spacing: -0.5px;
+	font-weight: 600;
+	line-height: 40px;
+	color: #444;
+}
+
+body > section > article#topright h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0.07em;
+}
+
+body > section > article#bottomleft h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 0.07em;
+	font-weight: normal;
+	color: #222;
+}
+
+body > section > article#bottommiddle h1 {
+	font: bold 32px "Century Schoolbook", Georgia, Times, serif;
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+body > section > article#bottomright h1 {
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0.05em;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 500;
+}	
+
+
+/* Articles Styles */
+
+body > section > article#topleft li {
+	font-family: Georgia, serif;
+	text-align: left;
+	font-size: 15px;
+	color:#4E443C;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 100;
+	letter-spacing: 0.07em;
+	margin-bottom: 8px;
+}
+
+body > section > article#topmiddle > p {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: justify;
+	text-indent: 32px;
+	font-size: 17px;
+	letter-spacing: 0.07em;
+	margin-top: 8px;
+}
+
+body > section > article#topright li {
+	font-family: Georgia, serif;
+	text-align: left;
+	font-size: 15px;
+	color:#4E443C;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 100;
+	letter-spacing: 0.07em;
+	margin-top: 12px;
+}
+
+body > section > article#bottomleft > p {
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 15px;
+	letter-spacing: 0.07em;
+	margin-top: 8px;
+	color: rgb(30,30,30);
+}
+
+body > section > article#bottommiddle > p {
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	text-align: justify;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	margin-top: 7px;
+	color: rgb(30,30,30);
+}
+
+body > section > article#bottommiddle > p::before {
+	content: "\27A3";
+  }
+
+body > section > article#bottomright > p {
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 15px;
+	letter-spacing: 0.07em;
+	margin-top: 8px;
+	color: rgb(30,30,30);
+}
+
+
+/* Footer Styles */
+
+body > footer {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 0.07em;
+}

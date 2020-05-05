@@ -1,0 +1,409 @@
+@charset "utf-8";
+
+/*
+	Assignment 4 - Case 4
+	Browyer Realty Layout Styles
+	Author: Laercio M Silva Jr W0433181
+	Date: 03/15/2020
+   
+	Filename: br_styles.css
+	Location\Filename: ..\br\css\br_styles.css
+*/
+
+/* HTML and Body Styles */
+html {
+   background-color: rgb(239,231,212);
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+   min-width: 640px;                      /* 5th rubric - Use of a background featuring a linear gradient */
+   background: linear-gradient(-200deg, rgba(55,55,55,0) 90%, rgba(55,55,55,0.8)), url(../imgs/br_paper.png) repeat;  /*1st rubric - Use of background images */
+   box-shadow: black 0px 0px 50px,                                                                     /*3rd rubric - Use of a box shadow around a page element */
+               inset rgba(55,55,55,0.8) 0px 0px 35px;     
+}
+
+
+/* Header Styles */
+body > header {
+   width: 100%;
+   padding: 2%;
+   position: relative;
+}
+
+body > header > img {                                     /*2nd rubric - Use of a border around a page element */
+   border-style: solid;
+   border-width: 40px;
+   border-image: url(../imgs/logo_border.jpg) 58 round;
+   width: 100%;
+   box-shadow: black 10px 5px 20px;                      /*3rd rubric - Use of a box shadow around a page element */
+}
+
+/* Header Navigation */
+header > nav {
+   width: 100%;
+   margin-top: 10px;
+}
+
+header > nav::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+header > nav > ul {
+   list-style-type: none;
+}
+
+header > nav > ul > li {                                        /*2nd rubric - Use of a border around a page element */
+   width: 31.33%;
+   height: 85px;
+   border-style: solid;
+   border-width: 20px;
+   border-image: url(../imgs/links1_border.jpg) 42 stretch;
+   background-color: rgb(239,233,212); 
+   box-shadow: inset rgb(218,200,156) 7px 5px 15px,                   /*3rd rubric - Use of a box shadow around a page element */
+               inset rgb(253,252,249) -5px -5px 25px,
+                     black 7px 5px 20px;
+}
+
+header > nav > ul > li#link1 {
+   clear: both;
+   float: left;
+   margin: 1% 1% 1% 17.67%;
+}
+
+header > nav > ul > li#link2 {
+   float: left;
+   margin: 1% 17.67% 1% 1%;
+}
+
+header > nav > ul > li#link3 {
+   clear: both;
+   float: left;
+   margin: 1%;
+}
+
+header > nav > ul > li#link4 {
+   float: left;
+   margin: 1%;
+}
+
+header > nav > ul > li#link5 {
+   float: left;
+   margin: 1%;
+}
+
+header > nav a {
+   padding: 15px 0;
+   font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+   text-align: center;
+   font-size: 26px;
+   overflow: hidden;
+}
+
+
+
+/* main Styles */
+body > main {
+   width: 100%;
+   padding: 2%;
+}
+
+
+/* #articletop Styles */
+
+main > #articletop {
+   display: block;
+   width: 100%;
+   margin: auto;
+   margin-top: 10px;
+}
+
+main > #articletop > h1 {
+	font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+	text-align: center;
+	font-size: 45px;
+	letter-spacing: 0.05em;
+   font-weight: 600;
+   color: rgb(64, 64, 225);
+   margin-bottom: 40px;
+   text-shadow: black 4px 5px 6px;                             /*4th rubric - Use of a text shadow around a section of element text */
+}
+
+main > #articletop > p {
+	font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+	text-align: justify;
+	text-indent: 40px;
+	font-size: 20px;
+   letter-spacing: 2px;
+   line-height: 30px;
+   margin: 8px 8%;
+}
+
+
+/* .slider Styles */
+main > .slider {
+   display: block;
+   width: 70%;
+   margin: auto;
+   margin-top: 20px;
+   position: relative;
+}
+
+main > .slider li img[alt="Dining Room"], main > .slider li img[alt="Bedroom 3"] {
+   -webkit-filter: brightness(2) contrast(0.8);     /*7th rubric - Changing the appearance of an element using the filter property */
+   filter: brightness(2) contrast(0.8);
+}
+
+main > .slider li {                                                     /*2nd rubric - Use of a border around a page element */
+   list-style: none;
+   position: absolute;
+   width: 100%;
+   border-style: solid;
+   border-width: 40px;
+   border-image: url(../imgs/slider_border.jpg) 74 stretch;
+}
+
+main > .slider li#lastli {                        /* used radial gradient to simulate the reflection of a lamp */
+   background: radial-gradient(13% 3.5% at 20% 10%, rgba(255,255,255,0.3), rgba(255,255,255,0.4), rgba(255,255,255,0));    /* 5th rubric - Use of a background featuring a radial gradient */
+   box-shadow: black 7px 5px 20px;                      /*3rd rubric - Use of a box shadow around a page element */
+}
+
+main > .slider input {
+   display: none;
+}
+
+main > .slider label {
+   background-color: rgb(64, 64, 225);
+   bottom: 32px;
+   left: 48%;
+   cursor: pointer;
+   display: block;
+   height: 15px;
+   width: 15px;
+   position: absolute;
+   z-index: 11;
+   opacity: 0;
+   transition: 0.8s;
+   border-radius: 10px;                  /*2nd rubric - Use of a border around a page element, including an example of a curved border  */
+}
+
+main > .slider:hover label {             /* makes labels visible when the container is hovering */
+   opacity: 0.5;
+   transition: 0.8s;
+}
+
+main > .slider label:hover {
+   opacity: 1;
+   transition: 0.5s;
+}
+
+main > .slider li:nth-child(1) label {
+   margin-left: -160px;
+}
+
+main > .slider li:nth-child(2) label {
+   margin-left: -120px;
+}
+
+main > .slider li:nth-child(3) label {
+   margin-left: -80px;
+}
+
+main > .slider li:nth-child(4) label {
+   margin-left: -40px;
+}
+
+main > .slider li:nth-child(5) label {
+   margin-left: 0px;
+}
+
+main > .slider li:nth-child(6) label {
+   margin-left: 40px;
+}
+
+main > .slider li:nth-child(7) label {
+   margin-left: 80px;
+}
+
+main > .slider li:nth-child(8) label {
+   margin-left: 120px;
+}
+
+main > .slider li:nth-child(9) label {
+   margin-left: 160px;
+}
+
+main > .slider img {
+   margin: auto;
+   width: 100%;
+   vertical-align: top;
+   opacity: 0;
+   visibility: hidden;
+}
+
+main > .slider li input:checked ~ label {
+   background: rgb(75,0,130);
+}
+
+main > .slider li input:checked ~ img {
+   opacity: 1;
+   visibility: visible;
+   z-index: 0;
+   transition: 0.5s;
+}
+
+
+/* Main Navigation */
+main > nav {
+   width: 100%;
+   margin-top: 60%;
+}
+
+main > nav::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+main > nav > ul {
+   list-style-type: none;
+}
+
+main > nav > ul > li {                          /*2nd rubric - Use of a border around a page element, including an example of a curved border  */ 
+   height: 86px;
+   border-style: solid;
+   border-width: 20px;
+   border-image: url(../imgs/links1_border.jpg) 42 stretch;
+   background-color: rgb(239,233,212);
+   box-shadow: inset rgb(218,200,156) 7px 5px 15px,              /*3rd rubric - Use of a box shadow around a page element */
+               inset rgb(253,252,249) -5px -5px 25px,
+                     black 7px 5px 20px;
+}
+
+
+main > nav > ul > li#mainlink1 {
+   clear: both;
+   float: left;
+   width: 52%;
+   margin: 1% 1% 1% 12%;
+}
+
+main > nav > ul > li#mainlink2 {
+   float: left;
+   width: 22%;
+   margin: 1% 12% 1% 1%;
+}
+
+main > nav > ul > li#mainlink3 {
+   clear: both;
+   float: left;
+   width: 40%;
+   margin: 1% 1% 1% 9%;
+}
+
+main > nav > ul > li#mainlink4 {
+   float: left;
+   width: 40%;
+   margin: 1% 9% 1% 1%;
+}
+
+main > nav a {
+   padding: 15px 0;
+   font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+   text-align: center;
+   font-size: 26px;
+}
+
+
+/* #articlebottom Styles */
+main > #articlebottom {
+   display: block;
+   width: 100%;
+   margin: auto;
+   margin: 10px 0 60px 0;
+}
+
+main > #articlebottom > h1 {
+	font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+	text-align: center;
+	font-size: 35px;
+	letter-spacing: 0.02em;
+   font-weight: 600;
+   color: rgb(64, 64, 225);
+   margin: 40px 0;
+   text-shadow: black 4px 7px 6px;                                  /*4th rubric - Use of a text shadow around a section of element text */
+}
+
+main > #articlebottom > table {
+   width: 70%;
+   margin: auto;
+}
+
+main > #articlebottom td {
+	font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+	text-align: center;
+	font-size: 20px;
+   letter-spacing: 2px;
+   line-height: 30px;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+   position: relative;
+   width: 100%;
+}
+
+footer > div#divfooter1 {
+   position: absolute;
+   width: 100%;
+   height: 60px;
+   z-index: 10;
+   box-shadow: black 0px 15px 50px;                  /*3rd rubric - Use of a box shadow around a page element */
+   background: linear-gradient(90deg,rgba(55,55,55,0.8), rgba(55,55,55,0) 15%, rgba(55,55,55,0) 50%, rgba(55,55,55,0.8)), url(../imgs/bodybottom_footer.jpg) no-repeat; 
+   background-size: 100% 60px;             /* 5th rubric - Use of a background featuring a linear gradient */
+}
+
+footer > div#divfooter2 {
+   position: absolute;
+   background-image: url(../imgs/footer_background.jpg);                          /*1st rubric - Use of background images */
+   background-repeat: repeat;
+   transform: perspective(300px) rotateX(40deg);
+   top: -45px;
+   left: -2.8%;
+   width: 105.6%;
+   height: 250px;
+   z-index: 9;
+}
+
+footer > p {
+   position: absolute;
+   padding-top: 130px;
+   font-family: 'Lucida Calligraphy', 'Times-Roman', Georgia, serif;
+   font-size: 50px;
+   font-weight: 600;
+   z-index: 10;
+   left: 25%;
+}
+
+/* Shadow and perspective to Browyer Realty text on footer */
+footer > p::before {
+   content: "Browyer Realty";
+   position: absolute;
+   z-index: 9;
+   width: 100%;
+   font-size: 50px;
+   font-weight: 600;
+   z-index: 9;
+   left: 26px;
+   bottom: 16px;
+   color: rgba(0,0,0,0.3);
+   transform: skewX(-30deg) scale(1, 1.5);      /*6th rubric - Changed the appearance of an element using the transform property  */
+}

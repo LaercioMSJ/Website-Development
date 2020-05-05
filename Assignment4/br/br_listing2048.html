@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	Assignment 4 - Case 4
+	Browyer Realty Listing 2048
+	Author: Laercio M Silva Jr W0433181
+	Date: 03/15/2020
+	
+	Filename: br_listing2048.html
+	Location\Filename: ..\br\br_listing2048.html
+    Supporting Files:
+    ..\br\imgs\br_logo.png
+    ..\br\imgs\br_paper.png
+    ..\br\imgs\br_photo1.png
+    ..\br\imgs\br_photo2.png
+    ..\br\imgs\br_photo3.png
+    ..\br\imgs\br_photo4.png
+    ..\br\imgs\br_photo5.png
+    ..\br\imgs\br_photo6.png
+    ..\br\imgs\br_photo7.png
+    ..\br\imgs\br_photo8.png
+    ..\br\imgs\br_photo9.png
+    ..\br\imgs\bodybottom_footer.jpg
+    ..\br\imgs\footer_background.jpg
+    ..\br\imgs\links1_border.jpg
+    ..\br\imgs\logo_border.jpg
+    ..\br\imgs\slider_border.jpg
+
+    ..\br\css\br_reset.css
+    ..\br\css\br_styles.css
+
+	In accordance with the guidelines on page 62 of the book HTML5 and CSS3, 7th Edition
+    -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Browyer Realty, Listing 2048, Renting, Owatonna, Minnesota">
+    <link href="css\br_reset.css" rel="stylesheet" />
+    <link href="css\br_styles.css" rel="stylesheet" />
+    <title>Browyer Realty Listing 2048</title>
+</head>
+
+<body>
+    <header>
+       <img src="imgs\br_logo.png" alt="Browyer Realty" />
+       <nav>
+          <ul>
+             <li id="link1"><a href="#">Residential</a></li>
+             <li id="link2"><a href="#">Properties</a></li>
+             <li id="link3"><a href="#">Business</a></li>
+             <li id="link4"><a href="#">Rentals</a></li>
+             <li id="link5"><a href="#">Appraisals</a></li>
+          </ul>
+       </nav>
+    </header>
+
+    <main>
+        <article id="articletop">
+            <h1>Listing 20481</h1>
+            <p>
+                Paradise found! This custom-built brand new home sits proudly on a 6.8-acre
+                high wooded site overlooking a 300-acre nature conservancy. The setting is
+                exceptional, and the home is every bit as exciting! A bright, open layout is 
+                enhanced by vaulted ceilings, hardwood and tumbled, ceramic flooring, custom 
+                maple cabinetry, upgraded fixtures, numerous windows, and incredible views.
+            </p>
+            <p>
+                There is much more. The property includes a 40x54 storage building - perfect
+                for a large boat and machinery. An exposed walkout on lower level leads down to
+                a beautiful wooded area.
+            </p>
+            <p>
+                An extra bathroom, bedroom, and family room can be added to the unfinished 
+                basement for more living space.
+            </p>
+        </article>
+
+        <ul class="slider">
+            <li>
+                <input type="radio" id="slide1" name="slide" checked>
+                <label for="slide1"></label>
+                <img src="imgs\br_photo1.png" alt="Front View" />
+            </li>
+            <li>
+                <input type="radio" id="slide2" name="slide">
+                <label for="slide2"></label>
+                <img src="imgs\br_photo2.png" alt="Rear View" />
+            </li>
+            <li>
+                <input type="radio" id="slide3" name="slide">
+                <label for="slide3"></label>
+                <img src="imgs\br_photo3.png" alt="Side View" />
+            </li>
+            <li>
+                <input type="radio" id="slide4" name="slide">
+                <label for="slide4"></label>
+                <img src="imgs\br_photo4.png" alt="Dining Room" />
+            </li>
+            <li>
+                <input type="radio" id="slide5" name="slide">
+                <label for="slide5"></label>
+                <img src="imgs\br_photo5.png" alt="Kitchen" />
+            </li>
+            <li>
+                <input type="radio" id="slide6" name="slide">
+                <label for="slide6"></label>
+                <img src="imgs\br_photo6.png" alt="Living Room" />
+            </li>
+            <li>
+                <input type="radio" id="slide7" name="slide">
+                <label for="slide7"></label>
+                <img src="imgs\br_photo7.png" alt="Bedroom 1" />
+            </li>
+            <li>
+                <input type="radio" id="slide8" name="slide">
+                <label for="slide8"></label>
+                <img src="imgs\br_photo8.png" alt="Bedroom 2" />
+            </li>
+            <li>
+                <input type="radio" id="slide9" name="slide">
+                <label for="slide9"></label>
+                <img src="imgs\br_photo9.png" alt="Bedroom 3" />
+            </li>
+            <li id="lastli">     <!-- used to insert radial-gradient background only over the last image -->
+                <img src="imgs\br_photo9.png" alt="invisible" />
+            </li>
+        </ul>
+
+        <nav>
+            <ul>
+               <li id="mainlink1"><a href="#">Request a Showing</a></li>
+               <li id="mainlink2"><a href="#">Map</a></li>
+               <li id="mainlink3"><a href="#">More Details</a></li>
+               <li id="mainlink4"><a href="#">Other Listings</a></li>
+            </ul>
+        </nav>
+
+        <article id="articlebottom">
+            <h1>Listing Description</h1>
+            <table>
+                <tr>
+                    <td>Address:</td>
+                    <td>List Price: $412,800</td>
+                </tr>
+                <tr>
+                    <td>Listing 2048</td>
+                    <td>Square Feet: 3,300</td>
+                </tr>
+                <tr>
+                    <td>414 Mandel Road</td>
+                    <td>Bedrooms: 4</td>
+                </tr>
+                <tr>
+                    <td>Owatonna, MN  55060</td>
+                    <td>Baths: 2-1/2</td>
+                </tr>
+            </table>
+        </article>
+    </main>
+
+    <footer>
+        <div id="divfooter1"></div>  <!-- used to insert a footer as background image -->
+        <div id="divfooter2"></div>  <!-- used to insert a floor as background image -->
+        <p>
+            Browyer Realty
+        </p>
+    </footer>
+ </body>
+ </html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	Assignment 5 - Form 
+	NSCC Application Form 
+	Author: Laercio M Silva Jr W0433181
+	Date: 05/02/2020
+	
+	Filename: form.html
+	Location\Filename: ..\form\form.html
+    Supporting Files:
+    ..\form\css\form_styles.css
+    ..\form\js\form_script.js
+
+	In accordance with the guidelines on page 62 of the book HTML5 and CSS3, 7th Edition
+    -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="NSCC, Application Form, College, Nova Scotia">
+    <link href="css\form_styles.css" rel="stylesheet" />
+    <script src="js\form_script.js" defer></script>
+    <title>NSCC Application Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Nova Scotia Community College Program Application</h1>
+    </header>
+    
+    <form id="myForm" name="applicationForm" action="" onsubmit="return validateForm()" method="post">
+
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2>Personal Information</h2>
+                </td>
+                <td colspan="6">
+                    <input name="personalInfoName" id="fullName" type="text" class="requireLetters" />
+                    <label for="fullName">Full Name (first, middle, last)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input name="personalInfoPrefName" id="prefFirstName" type="text" class="requireLetters" />
+                    <label for="prefFirstName">Preferred first name</label>
+                </td>
+                <td colspan="2">
+                    <input name="personalInfoPrevLastName" id="prevLastName" type="text" class="requireLetters" />
+                    <label for="prevLastName">Previous last name</label>
+                </td>
+                <td colspan="2" id="tdDateBirth">
+                    <input name="personalInfoDateOfBirth" id="dateOfBirth" type="text" placeholder="mm/dd/yyyy" class="requireNumbers" />
+                    <label for="dateOfBirth">Date of birth</label>
+                </td>
+                <td colspan="1">
+                    <label>Gender</label>
+                    <fieldset id="personalInfoGenderGroup">
+                        <label>
+                            <input name="genderRadio" id="maleRadio" value="M" type="radio" autocomplete="off" />
+                            M
+                        </label>
+                        <label>
+                            <input name="genderRadio" id="femaleRadio" value="F" type="radio" autocomplete="off" />
+                            F
+                        </label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input name="personalInfoApartNumber" id="apartNumber" type="text" class="requireNumbers" />
+                    <label for="apartNumber">Apartment number</label>
+                </td>
+                <td  colspan="7">
+                    <input name="personalInfoMailingAddress" id="mailingAddress" type="text" class="requireLettersAndNumbers" />
+                    <label for="mailingAddress">Permanent mailing address (street address, rural route, or P.O. Box)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input name="personalInfoCityTown" id="cityTown" type="text" class="requireLetters" />
+                    <label for="cityTown">City / Town</label>
+                </td>
+                <td colspan="1">
+                    <input name="personalInfoProvince" id="province" type="text" class="requireLetters" />
+                    <label for="province">Province</label>
+                </td>
+                <td colspan="2">
+                    <input name="personalInfoCountry" id="country" type="text" class="requireLetters" />
+                    <label for="country">Country</label>
+                </td>
+                <td colspan="1">
+                    <input name="personalInfoPostalCode" id="postalCode" type="text" class="requireNumbers" />
+                    <label for="postalCode">Postal code</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input name="personalInfoHomePhone" id="homePhone" type="tel" class="requireNumbers" />
+                    <label for="homePhone">Home telephone</label>
+                </td>
+                <td colspan="2">
+                    <input name="personalInfoWorkPhone" id="workPhone" type="tel" class="requireNumbers" />
+                    <label for="workPhone">Work telephone</label>
+                </td>
+                <td colspan="2">
+                    <input name="personalInfoCellPhone" id="cellPhone" type="tel" class="requireNumbers" />
+                    <label for="cellPhone">Cell phone</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input name="personalInfoEmailAddress" id="emailAddress" type="email" />
+                    <label for="emailAddress">Email address (We will be corresponding with you via email.  
+                                            Please ensure this address is secure and accessible.)
+                    </label>
+                </td>
+                <td colspan="4">
+                    <input name="personalInfoStudentID" id="studentID" type="text" class="requireLettersAndNumbers" />
+                    <label for="studentID">Student ID number (if you’ve previously attended NSCC.)</label>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2>English Language Proficiency</h2>
+                </td>
+                <td colspan="1">
+                    <h2>Citizenship Status</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" id="tdFirstLang">
+                    <label>Is English your first language?</label>
+                    <fieldset id="englishProfGroup">
+                        <label>
+                            <input name="englishFirstLangRadio" id="englishFirstLangYesRadio" value="Yes" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Yes
+                        </label>
+                        <label>
+                            <input name="englishFirstLangRadio" id="englishFirstLangNoRadio" value="No" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            No, my first language is:
+                        </label>
+                    </fieldset>
+                </td>
+                <td colspan="1" id="opacity1">
+                    <input name="englishProfFirstLanguage" id="firstLanguage" type="text" class="requireLetters" disabled />
+                    <label for="firstLanguage">(If no, proof of English language proficiency is required.)</label>
+                </td>
+                <td colspan="1" rowspan="2">
+                    <fieldset id="citizenshipStatusGroup">
+                        <label>
+                            <input name="citizenshipStatusRadio" id="citStatusCanadianRadio" value="Canadian Citizen" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Canadian Citizen
+                        </label>
+                        <label>
+                            <input name="citizenshipStatusRadio" id="citStatusPermResRadio" value="Permanent Resident" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Permanent Resident (Copy of Permanent Resident card required)
+                        </label>
+                        <label>
+                            <input name="citizenshipStatusRadio" id="citStatusRefugeeRadio" value="Refugee" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Refugee with protected person status
+                        </label>
+                        <label>
+                            <input name="citizenshipStatusRadio" id="citStatusOtherRadio" value="Other" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Other (Please specify below)
+                        </label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="2">
+                    <h2>Program Choices</h2>
+                </td>
+                <td colspan="1" rowspan="2">
+                    <label>You can apply for one or two program/campus combinations. 
+                            Changes or additions to your choices require the submission 
+                            of a new application and fee. Your application will be considered 
+                            for the next intake.
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" id="opacity2">
+                    <input name="citizenshipStatusCountryOfCit" id="CountryOfCit" type="text" class="requireLetters" disabled />
+                    <label for="CountryOfCit">Country of Citizenship (if not Canadian)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input name="progChoicesPrefProgChoice" id="prefProgChoice" type="text" class="requireLetters" />
+                    <label for="prefProgChoice">Preferred program choice</label>
+                </td>
+                <td colspan="1">
+                    <input name="progChoicesPrefProgChoiceLoc" id="prefProgChoiceLoc" type="text" class="requireLetters" />
+                    <label for="prefProgChoiceLoc">Location</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input name="progChoicesSecProgChoice" id="secProgChoice" type="text" class="requireLetters" />
+                    <label for="secProgChoice">Second program choice</label>
+                </td>
+                <td colspan="1">
+                    <input name="progChoicesSecProgChoiceLoc" id="secProgChoiceLoc" type="text" class="requireLetters" />
+                    <label for="secProgChoiceLoc">Location</label>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="1">
+                    <h2>Application Fee</h2>
+                </td>
+                <td colspan="3">
+                    <label>The non-refundable $25 application fee ($75 international, $0 ALP) must be received 
+                            in order for your application to be processed. Please do not send cash.
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <fieldset id="applicationFeeGroup">
+                        <label>
+                            <input name="applicationFeeRadio" id="appFeeVisaRadio" value="Visa" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Visa
+                        </label>
+                        <label>
+                            <input name="applicationFeeRadio" id="appFeeMastercardRadio" value="Mastercard" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Mastercard
+                        </label>
+                        <label>
+                            <input name="applicationFeeRadio" id="appFeeDiscoverRadio" value="Discover" type="radio" onclick="enableElements(this.name, this.value)" />
+                            Discover
+                        </label>
+                        <label>
+                            <input name="applicationFeeRadio" id="appFeeAmericanExpressRadio" value="American Express" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            American Express
+                        </label>
+                        <label>
+                            <input name="applicationFeeRadio" id="appFeeChequeRadio" value="Cheque" type="radio" onclick="enableElements(this.name, this.value)" autocomplete="off" />
+                            Cheque/Money Order (Payable to NSCC. No post-dated cheques.)
+                        </label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr id="opacity3">
+                <td colspan="2">
+                    <input name="applicationFeeCredCardNum" id="creditCardNumber" type="text" class="requireNumbers" disabled />
+                    <label for="creditCardNumber">Credit card number</label>
+                </td>
+                <td colspan="1">
+                    <input name="applicationFeeCredCardExpDate" id="creditCardExpDate" type="text" class="requireNumbers" disabled />
+                    <label for="creditCardExpDate">Exp. Date (mm/yy)</label>
+                </td>
+                <td colspan="1">
+                    <input name="applicationFeeCredCardCHolderName" id="creditCardCHolderName" type="text" class="requireLetters" disabled />
+                    <label for="creditCardCHolderName">Name of Cardholder (as it appears on the card)</label>
+                </td>
+                <td colspan="1">
+                    <input name="applicationFeeCredCardCHolderSign" id="creditCardCHolderSign" type="text" class="requireLetters" disabled />
+                    <label for="creditCardCHolderSign">Cardholder’s signature</label>
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" name="submit" value="Submit">
+        <img src="imgs\nscc.png" alt="NSCC Logo" />
+
+    </form>
+
+    <footer>
+        <h1>Nova Scotia Community College</h1>
+    </footer>
+ </body>
+ </html>

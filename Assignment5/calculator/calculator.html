@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	Assignment 5 - Calculator 
+	Calculator 
+	Author: Laercio M Silva Jr W0433181
+	Date: 05/02/2020
+	
+	Filename: calculator.html
+	Location\Filename: ..\calculator\calculator.html
+    Supporting Files:
+    ..\calculator\css\calculator_styles.css
+    ..\calculator\js\calculator_script.js
+
+	In accordance with the guidelines on page 62 of the book HTML5 and CSS3, 7th Edition
+    -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Calculator">
+    <link href="css\calculator_styles.css" rel="stylesheet" />
+    <script src="js\calculator_script.js" defer></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div>
+        <input name="display" id="display" type="text" disabled />
+        <button value="ce" disabled>CE</button>
+        <button value="c" onclick="cleanDisplay()">C</button>
+        <button value="del" onclick="deleteNumber(this.value)">Del</button>
+        <button value="/" onclick="displaysNumber(this.value)">/</button>
+        <button value="7" onclick="displaysNumber(this.value)">7</button>
+        <button value="8" onclick="displaysNumber(this.value)">8</button>
+        <button value="9" onclick="displaysNumber(this.value)">9</button>
+        <button value="*" onclick="displaysNumber(this.value)">x</button>
+        <button value="4" onclick="displaysNumber(this.value)">4</button>
+        <button value="5" onclick="displaysNumber(this.value)">5</button>
+        <button value="6" onclick="displaysNumber(this.value)">6</button>
+        <button value="-" onclick="displaysNumber(this.value)">-</button>
+        <button value="1" onclick="displaysNumber(this.value)">1</button>
+        <button value="2" onclick="displaysNumber(this.value)">2</button>
+        <button value="3" onclick="displaysNumber(this.value)">3</button>
+        <button value="+" onclick="displaysNumber(this.value)">+</button>
+        <button value="+-" disabled>+-</button>
+        <button value="0" onclick="displaysNumber(this.value)">0</button>
+        <button value="." onclick="displaysNumber(this.value)">.</button>
+        <button value="=" onclick="displaysNumber(this.value)">=</button>
+    </div>
+ </body>
+ </html>
